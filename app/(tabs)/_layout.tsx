@@ -1,9 +1,7 @@
-import {
-  default as Ionicons,
-  default as Ioniconss,
-} from "@expo/vector-icons/Ionicons";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
-import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import Entypo from '@expo/vector-icons/Entypo';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { Tabs } from "expo-router";
 
 export default function TabsLayout() {
@@ -18,16 +16,12 @@ export default function TabsLayout() {
         <Tabs.Screen
           name="index"
           options={{
-            title: "Messages",
+            title: "Home",
             tabBarIcon: ({ color, focused }) => {
               return focused ? (
-                <MaterialCommunityIcons
-                  name="android-messages"
-                  size={20}
-                  color={color}
-                />
+                <Entypo name="home" size={20} color={color} />
               ) : (
-                <MaterialIcons name="message" size={20} color={color} />
+                <FontAwesome name="home" size={20} color={color} />
               );
             },
           }}
@@ -35,12 +29,12 @@ export default function TabsLayout() {
         <Tabs.Screen
           name="login"
           options={{
-            title: "Notices",
+            title: "Login",
             tabBarIcon: ({ color, focused }) => {
               return focused ? (
-                <Ionicons name="file-tray-full-sharp" size={20} color={color} />
+                <MaterialIcons name="login" size={20} color={color} />
               ) : (
-                <Ioniconss name="file-tray-stacked" size={20} color={color} />
+                <MaterialCommunityIcons name="login" size={20} color={color} />
               );
             },
           }}

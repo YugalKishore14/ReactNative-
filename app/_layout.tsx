@@ -1,11 +1,10 @@
-import { Stack } from "expo-router";
+import { Slot } from "expo-router";
+import RouteGuard from "./(tabs)/RouteGuard";
 
 export default function RootLayout() {
-  return(
-    <>
-     <Stack>
-      <Stack.Screen name="(tabs)" options={{headerShown:false}}/>
-     </Stack>
-    </>
+  return (
+    <RouteGuard>
+      <Slot />
+    </RouteGuard>
   );
 }
